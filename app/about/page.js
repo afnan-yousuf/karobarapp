@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MainHeading from '../components/MainHeading';
 
 const stats = [
   { label: 'Laptops Delivered', value: '12,000+' },
@@ -28,12 +29,13 @@ const values = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      
+
       {/* Hero / Story Intro */}
       <section className="mx-auto max-w-4xl px-4 pt-16 pb-12 text-center sm:px-6 lg:px-8">
         <span className="inline-block rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold tracking-wide text-indigo-700 uppercase">
           Our Story
         </span>
+        <MainHeading a={400} b={300}/>
         <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
           Built by Tech Enthusiasts, for Everyday Builders.
         </h1>

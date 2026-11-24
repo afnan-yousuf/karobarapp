@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import MainHeading from './components/MainHeading'
 const features = [
   {
     title: 'Next-Gen Performance',
@@ -45,7 +45,7 @@ const lineup = [
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      
+      <MainHeading a={4} b={6} />
       {/* Hero Section */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:flex lg:items-center lg:justify-between lg:gap-12 lg:py-24 lg:px-8">
         <div className="max-w-xl">
