@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-export default function Product({ name, src, detail, price }) {
+export default function Product(pro) {
   return (
     <div className="group flex w-80 flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Image Container */}
       <div className="relative flex h-56 w-full items-center justify-center overflow-hidden bg-gray-50 p-6">
         <Image
         loading="lazy"
-          src={src}
+          src={pro.src}
           width={200}
           height={200}
           alt={name || "Product image"}
@@ -19,17 +19,17 @@ export default function Product({ name, src, detail, price }) {
       <div className="flex flex-1 flex-col justify-between p-5">
         <div>
           <h2 className="line-clamp-1 text-lg font-semibold text-gray-900">
-            {name}
+            {pro.name}
           </h2>
           <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-gray-500">
-            {detail}
+            {pro.detail}
           </p>
         </div>
 
         {/* Footer / Action Area */}
         <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4">
-          {price && (
-            <span className="text-lg font-bold text-gray-900">${price}</span>
+          {pro.price && (
+            <span className="text-lg font-bold text-gray-900">${pro.price}</span>
           )}
           <button
             type="button"
