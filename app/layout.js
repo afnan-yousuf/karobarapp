@@ -50,6 +50,18 @@ export default function RootLayout({ children }) {
               >
                 About Us
               </Link>
+              <Link
+                href="/contact"
+                className="text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/registration"
+                className="text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600"
+              >
+                Register
+              </Link>
             </nav>
           </div>
         </header>

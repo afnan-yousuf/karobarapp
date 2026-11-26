@@ -1,46 +1,60 @@
-import Link from 'next/link';
-import MainHeading from '../components/MainHeading';
+'use client'
+import Link from "next/link";
+import MainHeading from "../components/MainHeading";
+import Todos from "../components/Todos";
+import Button from "../components/Button";
 
 const stats = [
-  { label: 'Laptops Delivered', value: '12,000+' },
-  { label: 'Customer Satisfaction', value: '99.4%' },
-  { label: 'Warranty Coverage', value: '2 Years' },
-  { label: 'Support Response', value: '< 2 Hrs' },
+  { label: "Laptops Delivered", value: "12,000+" },
+  { label: "Customer Satisfaction", value: "99.4%" },
+  { label: "Warranty Coverage", value: "2 Years" },
+  { label: "Support Response", value: "< 2 Hrs" },
 ];
 
 const values = [
   {
-    title: 'Honest Hardware Specs',
+    title: "Honest Hardware Specs",
     description:
-      'No confusing model numbers or hidden downgrades. Every machine is benchmarked and listed with exact processor, RAM, and display details.',
+      "No confusing model numbers or hidden downgrades. Every machine is benchmarked and listed with exact processor, RAM, and display details.",
   },
   {
-    title: 'Rigorous 40-Point Testing',
+    title: "Rigorous 40-Point Testing",
     description:
-      'Before any laptop leaves our bench, it goes through thermal stress tests, battery health checks, and display calibration.',
+      "Before any laptop leaves our bench, it goes through thermal stress tests, battery health checks, and display calibration.",
   },
   {
-    title: 'Direct Local Support',
+    title: "Direct Local Support",
     description:
-      'Talk directly to hardware technicians—not scripted chatbots—whenever you need upgrades, troubleshooting, or warranty service.',
+      "Talk directly to hardware technicians—not scripted chatbots—whenever you need upgrades, troubleshooting, or warranty service.",
   },
 ];
+
+function abc(){
+  console.log("i am abc")
+}
+
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-
       {/* Hero / Story Intro */}
       <section className="mx-auto max-w-4xl px-4 pt-16 pb-12 text-center sm:px-6 lg:px-8">
         <span className="inline-block rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold tracking-wide text-indigo-700 uppercase">
           Our Story
         </span>
-        <MainHeading a={400} b={300}/>
+        <MainHeading a={400} b={300} />
         <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
           Built by Tech Enthusiasts, for Everyday Builders.
         </h1>
+        <Todos></Todos>
+        <Button type="button" value="Click ME" onClick={abc} />
+
+        <Button type="button" value="Click ME" onClick={()=>console.log("Me bhi hon")} />
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-          We started with a simple frustration: buying a reliable laptop shouldn’t require decoding endless spec sheets or overpaying for features you never use. We curate and engineer machines that balance raw speed, clean design, and real-world durability.
+          We started with a simple frustration: buying a reliable laptop
+          shouldn’t require decoding endless spec sheets or overpaying for
+          features you never use. We curate and engineer machines that balance
+          raw speed, clean design, and real-world durability.
         </p>
       </section>
 
@@ -67,7 +81,8 @@ export default function AboutPage() {
             Why People Trust Our Machines
           </h2>
           <p className="mt-2 text-slate-600">
-            Whether you are writing code, editing video, or running a business, your laptop is your primary tool. Here is how we back ours up.
+            Whether you are writing code, editing video, or running a business,
+            your laptop is your primary tool. Here is how we back ours up.
           </p>
         </div>
 
@@ -98,7 +113,8 @@ export default function AboutPage() {
             Ready to Find Your Next Laptop?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            Explore our current lineup or reach out if you need help picking the right configuration for your workflow.
+            Explore our current lineup or reach out if you need help picking the
+            right configuration for your workflow.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

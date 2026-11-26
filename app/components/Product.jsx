@@ -10,7 +10,7 @@ export default function Product(pro) {
           src={pro.src}
           width={200}
           height={200}
-          alt={name || "Product image"}
+          alt={pro.name || "Product image"}
           className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </div>
